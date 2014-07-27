@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ToDo List</string>
+    <string name="drawer_open">Slider manu opened</string>
+    <string name="drawer_close">Slider manu closed</string>
+	<string name="action_settings">Settings</string>
+	
+	<string-array name="nav_drawer_items">
+	    <item >Заметки</item>
+	    <item >Напоминания</item>
+	    <item >Справка</item>
+	    <item >Настройки</item>
+	</string-array>
+	
+	<array name="nav_drawer_icons">
+	    <item>@drawable/document</item>
+	    <item>@drawable/clock</item>
+	    <item>@drawable/info</item>
+	    <item>@drawable/settings</item>
+	</array>
+	
+	<string name="desc_list_item_icon">Item icon</string>
+</resources>
