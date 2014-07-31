@@ -16,7 +16,7 @@
         android:layout_gravity="start"
         android:choiceMode="singleChoice"
         android:listSelector="@drawable/list_selector"
-        android:background="@color/list_background" >
+        android:background="#F5F5F5" >
     </ListView>
 
 </android.support.v4.widget.DrawerLayout>
