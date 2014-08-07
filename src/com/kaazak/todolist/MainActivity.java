@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -89,7 +90,6 @@ public class MainActivity extends Activity
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) 
 	{
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
@@ -146,11 +146,11 @@ public class MainActivity extends Activity
     
     public void displayView(int position)
 	{
-		Fragment fragment = null;
 		switch(position)
 		{
 			case 0:
-				//fragment = new noteFragment();
+				Intent intent = new Intent(this, NoteActivity.class);
+				startActivity(intent);
 				break;
 			case 1:
 				//fragment = new reminderFragment();
@@ -163,20 +163,10 @@ public class MainActivity extends Activity
 				break;
 		}
 		
-		if(fragment != null)
-		{
-			FragmentManager fragmentManager = getFragmentManager();
-			fragmentManager.beginTransaction().
-				replace(R.id.frame_container, fragment).commit();
 			drawerList.setItemChecked(position, true);
 			drawerList.setSelection(position);
 			setTitle(navMenuTitles[position]);
 			drawerLayout.closeDrawer(drawerList);
-		} 
-		else
-		{
-			Log.e("MainActivity", "Error in creating fragment");
-        }
 		
 	}
 }
